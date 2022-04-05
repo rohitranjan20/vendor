@@ -1,0 +1,799 @@
+<body class="bg-light" data-new-gr-c-s-check-loaded="14.984.0" data-gr-ext-installed="" cz-shortcut-listen="true">
+
+    <div class="container" style="background: #FFF;">
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="http://vendor.mysita.com/assets/img/acil-logo.jpeg" style="width: 100px;">
+        <h2>Vendor Management System</h2>
+        <p class="lead">Registration Form</p>
+      </div>
+
+      <div class="row">
+          <div class="col-md-12 order-md-1">
+            <a class="float-right" style="font-weight:bold;" href="http://vendor.mysita.com/vendor/status">Already Registered ? - <u>Check Status</u></a>
+          </div>
+        <div class="col-md-12 order-md-1">
+          <form  method="POST" [formGroup]="vendorCreate" (ngSubmit)="onSubmit()" class="needs-validation"  enctype="multipart/form-data">
+            <input type="hidden" name="vendorreg" id="vendorreg">
+            
+                        
+            <div class="row">
+              <div class="col-md-12 mb-3">
+                <label for="firstName">States<span class="mandatory">*</span> </label>
+                <select  multiple data-live-search="true" class="d-block w-100 selectpicker" id="project_state" formControlName="project_state" name="project_state"  title="Choose..." data-actions-box="true">
+
+                  <option value="074CB28F-436D-4C96-A0A5-622590DA05A7">Andhra Pradesh</option>
+                  <option value="081B4623-C91E-4F93-A75C-C16F7AFC9067">Sikkim</option>
+                  <option value="0EC760B4-DF67-44C1-B366-46B1A57E99CC">Maharashtra</option>
+                  <option value="1544FF66-E662-4D23-A62D-AA1CB5690B18">Arunachal Pradesh</option>
+                  <option value="1EFD6047-61CF-4F02-B49A-89A0CFE63C2D">Tripura</option>
+                  <option value="1FDED699-6803-47C9-84D2-C888875F218E">Goa</option>
+                  <option value="2D7A353A-FA47-4B91-B64F-0DD4711AE930">Delhi </option>
+                  <option value="358D6B57-1663-406F-883E-D91A0C94F4B9">Jharkhand</option>
+                  <option value="43F32E08-D2CE-4AF9-9BE3-24FD1F45339F">Bihar</option>
+                  <option value="48CE734F-C62D-4FFD-91DB-D96C91B85A85">Uttar Pradesh</option>
+                  <option value="661797ED-3130-4CFD-A319-7D7B84A8719C">Daman and Diu</option>
+                  <option value="795FC071-BC98-4231-8377-E6683B6BDBE7">Haryana</option>
+                  <option value="7B908C28-3C8F-48D1-8672-CCF4F8B5D6D6">Himachal Pradesh</option>
+                  <option value="7E2ECD0B-A413-4F95-84A9-274DA88B531E">Punjab</option>
+                  <option value="866F2E07-C86D-46E4-BB9F-6E75142B885F">Jammu and Kashmir</option>
+                  <option value="89CB7936-C774-4B68-AE76-884F240B3CAB">West Bengal</option>
+                  <option value="92D0EB44-B1C2-45EE-A298-34955B25DFEE">Orissa</option>
+                  <option value="9EA69B65-CC6F-4B45-92D7-EBA0CB341663">Rajasthan</option>
+                  <option value="A06261E6-DDFB-4E9D-813C-5C90FBE9AABB">Assam</option>
+                  <option value="A62820DB-D547-4EFB-8581-938FB07D3E60">Lakshadeep</option>
+                  <option value="A8066F48-6218-4C3D-B36A-9896704B384C">Pondicherry</option>
+                  <option value="B171256A-7375-45BB-8559-60911A6110D9">Madya Pradesh</option>
+                  <option value="B7DD600E-CF52-468E-9109-21629602732B">Nagaland</option>
+                  <option value="B98E823F-53E1-4BFA-B783-F86D45319E49">Karnataka</option>
+                  <option value="BF7F6F34-A61C-4F9F-BB0D-62ED281616B5">Manipur</option>
+                  <option value="C04219EF-9DCC-47BD-BF2E-0016EE0DF583">Uttaranchal</option>
+                  <option value="C25EAF13-FC8D-467F-BACA-69B3EA2D7DCA">Kerala</option>
+                  <option value="C61C7D99-AB20-4339-A3BE-3D4025E24CBC">Chhattisgarh</option>
+                  <option value="CEB0D50F-C763-441B-A73A-CFAB4AA79AC4">Meghalaya</option>
+                  <option value="D9E8EBD2-6C22-4B33-A65B-0D5B86DA4C93">Mizoram</option>
+                  <option value="E3649DF2-BC22-4C4A-91F8-CE1B1833A351">Tamil Nadu</option>
+                  <option value="EB45B399-67CD-4E41-AA1C-122A8CD6984D">Chandigarh</option>
+                  <option value="ECD3F34C-7F22-4B21-8819-FA2FC90F09D2">Andaman and Nicobar Islands</option>
+                  <option value="EE852B32-CCE5-4CFE-BC41-F7623A82EA4F">Dadar and Nagar Haveli</option>
+                  <option value="FB7FF087-60CF-4FDD-9A76-DDC01DAC6847">Gujarat</option>
+                  <option value="FB7FF087-60CF-4FDD-9A76-DDC01DAC6848">Telangana</option>
+              
+                </select>
+                <small class="error" *ngIf="f.project_state.invalid && (f.project_state.dirty || f.project_state.touched)">
+                  <div *ngIf="f.project_state.hasError('required')">Please choose state.</div>
+                </small>
+              </div>
+
+              
+              
+            </div>
+            
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Vendor Registration for<span class="mandatory">*</span></label>
+                <select class="custom-select d-block w-100" id="vendor_type" formControlName="vendor_type" name="vendor_type" >
+                  <option value="">Choose...</option>
+                  <option value="Supplier">Supplier</option>
+                  <option value="other">Other</option>
+                </select>
+
+                <small class="error" *ngIf="f.vendor_type.invalid && (f.vendor_type.dirty || f.vendor_type.touched)">
+                  <div *ngIf="f.vendor_type.hasError('required')">Please choose vendor type</div>
+                </small>
+                
+              </div>
+
+
+              <div class="col-md-6 mb-3 d-none" id="vendordiv">
+                <label for="vendor_name">Other Type<span class="mandatory">*</span></label>
+                <input type="text" class="form-control" formControlName="vendor_type_other"  name="vendor_type_other" id="vendor_type_other" placeholder="Enter other type">
+              </div>
+    
+              
+
+
+              <div class="col-md-6 mb-3">
+                <label for="vendor_name">Name (Individual / Company)<span class="mandatory">*</span></label>
+                <input type="text" class="form-control" formControlName="vendor_name" id="vendor_name" name="vendor_name" placeholder="" value="" >
+                <small class="error" *ngIf="f.vendor_name.invalid && (f.vendor_name.dirty || f.vendor_name.touched)">
+                  <div *ngIf="f.vendor_name.hasError('required')">Please enter name</div>
+                </small>
+              </div>
+              
+            </div>
+
+            
+
+
+            <div class="mb-3">
+              <label for="username">Upload Company Profile</label>
+              
+              <!-- <select class="custom-select" id="profile_upl" name="profile_upl"  >
+                  <option value="">Choose...</option>
+                  
+                  <option value="Profile">Profile</option>
+                  <option value="Constitution of Vendor">Constitution of Vendor</option>
+                  <option value="Firm">Firm</option>
+                  <option value="Company With name of proprietor">Company With name of proprietor</option>
+                  <option value="Partners">Partners</option>
+                  <option value="Directors with Contact no.">Directors with Contact no.</option>
+                  
+              </select> -->
+
+              
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <input type="text" id="profile_upl" formControlName="profile_upl" class="form-control" name="profile_upl" >
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <span id="render-more-attach">
+                    <div class="input-group">
+                        <input type="file" class="form-control" formControlName="profile_upl_attach"  name="profile_upl_attach" multiple accept="image/gif, image/jpeg, image/png,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" (change)="uplodProfile($event)">
+                        <button type="button" class="btn btn-success btn-sm add-more-attch" (click)="addProfileAttach()"><i class="fa fa-plus"></i></button>
+                    </div>
+
+                    <!-- //*ngFor="let item of img; let i = index" -->
+
+                    <div class="input-group mt-2" *ngFor="let profatt of profileAttach; let i = index">
+                      <input type="file" class="form-control"  name="profile_upl_attach[]" required="" accept="image/gif, image/jpeg, image/png,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                      <button type="button" class="btn btn-danger btn-sm remove-more-attach" (click)="removeProfileAttach(profatt,i)"><i class="fa fa-minus"></i></button>
+                    </div>
+                    
+                  </span>
+                </div>
+
+              </div>
+            </div>
+            
+            <h4 class="mb-3">Contact Person (Add Min. Two) <button type="button" class="btn btn-sm btn-success float-right add-more-prof-contact" (click)="addProfileContact()"  data-num="0">
+                        <i class="fa fa-plus fa-lg"></i>
+                        </button></h4>
+            <span id="render-profile-contact" formArrayName="profileContact">
+                
+                  <div class="row mb-3" *ngFor="let contper of profContact().controls; let ci=index" [formGroupName]="ci">
+                    <div class="col-md-12">
+                      <button type="button" class="btn btn-sm btn-danger float-right remove-prof-contact" data-num="" (click)="removeProfileContact(ci)"><i class="fa fa-minus fa-lg"></i></button>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="firstName">Name<span class="mandatory">*</span></label>
+                      <input type="text" class="form-control"  formControlName="profile_contact_name"  name="profile_contact_name" >
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="firstName">Contact No.<span class="mandatory">*</span></label>
+                      <input type="text" class="form-control" formControlName="profile_contact_no"  name="profile_contact_no">
+                    </div>
+                  </div>
+
+               
+                
+
+
+            </span>
+
+            <h4 class="mb-3">Full Address of Entity</h4>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Full Address<span class="mandatory">*</span></label>
+                <input type="text" class="form-control" formControlName="vendor_address" id="vendor_address" name="vendor_address" >
+
+                <small class="error" *ngIf="f.vendor_address.invalid && (f.vendor_address.dirty || f.vendor_address.touched)">
+                  <div *ngIf="f.vendor_address.hasError('required')">Please enter address</div>
+                </small>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="vendor_country">Country<span class="mandatory">*</span></label>
+                
+                <select class="custom-select" formControlName="vendor_country" id="vendor_country" name="vendor_country" (change)="changeCountry($event)" >
+                  <option value="">Choose...</option>
+
+                    <option value="{{country.cid}}" *ngFor="let country of countries;">{{country.name}}</option>
+                  </select>
+
+                  <small class="error" *ngIf="f.vendor_country.invalid && (f.vendor_country.dirty || f.vendor_country.touched)">
+                    <div *ngIf="f.vendor_country.hasError('required')">Please choose country</div>
+                  </small>
+              </div>
+            </div>
+                  
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <label for="firstName">State<span class="mandatory">*</span></label>
+                <!--<input type="text" class="form-control" id="vendor_state" name="vendor_state" >-->
+                <select class="custom-select" formControlName="vendor_state" id="vendor_state" name="vendor_state" (change)="changeState($event);" >
+                  <option value="">Choose...</option>
+                  <option value="{{state.sid}}"  *ngFor="let state of states;">{{state.name}}</option>
+                  
+                </select>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="lastName">City<span class="mandatory">*</span></label>
+                <!--<input type="text" class="form-control" id="vendor_city" name="vendor_city" >-->
+                <select class="custom-select" formControlName="vendor_city" id="vendor_city" name="vendor_city" >
+                  <option value="">Choose...</option>
+                  <option value="{{city.cid}}"  *ngFor="let city of cities;">{{city.name}}</option>
+                </select>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <label for="lastName">Pin Code<span class="mandatory">*</span></label>
+                <input type="text" class="form-control" formControlName="vendor_pincode" id="vendor_pincode" name="vendor_pincode" >
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Email<span class="mandatory">*</span></label>
+                <input type="text" class="form-control" formControlName="vendor_email" id="vendor_email" name="vendor_email" >
+
+                <small class="error" *ngIf="f.vendor_email.invalid && (f.vendor_email.dirty || f.vendor_email.touched)">
+                  <div *ngIf="f.vendor_email.hasError('required')">Please enter email</div>
+                </small>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Mobile<span class="mandatory">*</span></label>
+                <input type="text" class="form-control" formControlName="vendor_mobile" id="vendor_mobile" name="vendor_mobile" >
+
+                <small class="error" *ngIf="f.vendor_mobile.invalid && (f.vendor_mobile.dirty || f.vendor_mobile.touched)">
+                  <div *ngIf="f.vendor_mobile.hasError('required')">Please enter mobile</div>
+                </small>
+              </div>
+            </div>
+                  
+                              
+            <hr>
+                             
+            <div class="mb-3">
+              <label for="address2">Name of website, if any</label>
+              <input type="text" class="form-control" formControlName="vendor_website" id="vendor_website" name="vendor_website">
+            </div>
+
+            <div class="mb-3">
+              <label for="address2">Type of Entity<span class="mandatory">*</span></label>
+              <select class="custom-select d-block w-100" formControlName="multi_reg_type" id="multi_reg_type" name="multi_reg_type" >
+                  <option value="">Choose...</option>
+                  <option value="Proprietorship">Proprietorship</option>
+                  <option value="Partnership">Partnership</option>
+                  <option value="Company">Company</option>
+                  <option value="LLP">LLP</option>
+                </select>
+
+                <small class="error" *ngIf="f.multi_reg_type.invalid && (f.multi_reg_type.dirty || f.multi_reg_type.touched)">
+                  <div *ngIf="f.multi_reg_type.hasError('required')">Please choose type of entity</div>
+                </small>
+            </div>
+                  
+                  
+            <div class="mb-3">
+              <label for="username">Do you have Aadhar Card</label>
+              <br>
+              <label><input type="radio" formControlName="is_proprietary_firm" name="is_proprietary_firm" value="1" (click)="checkAadhar(1)">&nbsp;Yes&nbsp;<input type="radio" formControlName="is_proprietary_firm" name="is_proprietary_firm" value="0" (click)="checkAadhar(0)" [checked]="true">&nbsp;No</label>
+
+              <div  id="aadhar_div" [ngClass]="isAadhar">
+                <div class="form-group" >
+                  <label for="username">Aadhar No.<span class="mandatory">*</span> </label>
+                  <input type="number" name="aadhar_no" formControlName="aadhar_no" id="aadhar_no" class="form-control" placeholder="" onKeyPress="if(this.value.length==12) return false;">
+                </div>
+                <div class="input-group" >
+                  
+                  <input type="file" class="form-control" formControlName="vendor_adhar" id="vendor_adhar" name="vendor_adhar" accept="image/gif, image/jpeg, image/png,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" (change)="uploadAadhar($event)">
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="address2">Nature of business: (Give details about your Services / Products)<span class="mandatory">*</span></label>
+
+              <div class="input-group">
+
+                  <select multiple data-live-search="true" class="d-block w-100 selectpicker" formControlName="nature_of_business" id="nature_of_business" name="nature_of_business[]"  title="Choose..." data-actions-box="true">
+                    
+                      <option value="TID0000001">ADMIXTURE</option>
+                    
+                      <option value="TID0000002">ALUMINUM SECTIONS</option>
+                    
+                      <option value="TID0000003">BULK MATERIAL</option>
+                    
+                      <option value="TID0000004">CEMENT</option>
+                    
+                      <option value="TID0000005">CONSUMABLE</option>
+                    
+                      <option value="TID0000033">CORPORATE SOCIAL RESPONSIBILITY (CSR)</option>
+                    
+                      <option value="TID0000006">DOOR & WINDOW</option>
+                    
+                      <option value="TID0000025">DOOR AND WINDOW FITTINGS</option>
+                    
+                      <option value="TID0000008">DUMMY FOR OPENING</option>
+                    
+                      <option value="TID0000007">ELECTRICAL</option>
+                    
+                      <option value="TID0000028">FALL CEILING MATERIAL</option>
+                    
+                      <option value="TID0000010">FENCING & SITE DEVELOPMENT</option>
+                    
+                      <option value="TID0000031">FIRE FIGHTING </option>
+                    
+                      <option value="TID0000030">FURNITURE & FIXTURES (BILLABLE TO CLIENT)</option>
+                    
+                      <option value="TID0000009">GLASS & GLAZING</option>
+                    
+                      <option value="TID0000034">HEATING, VENTILATION AND AIR CONDITIONING</option>
+                    
+                      <option value="TID0000026">IT MATERIAL</option>
+                    
+                      <option value="TID0000011">LAB EQUIPEMENT</option>
+                    
+                      <option value="TID0000012">LUBRICANT & FUEL</option>
+                    
+                      <option value="TID0000013">MECHANICAL</option>
+                    
+                      <option value="TID0000032">PLANT & TREE (HORTICULTURE) </option>
+                    
+                      <option value="TID0000029">PROJECT SITE</option>
+                    
+                      <option value="TID0000016">PVC SHUTTERING</option>
+                    
+                      <option value="TID0000018">READY MIX CONCRETE</option>
+                    
+                      <option value="TID0000017">REINFORCEMENT STEEL</option>
+                    
+                      <option value="TID0000019">SAFETY MATERIAL</option>
+                    
+                      <option value="TID0000020">SANITARY FITTINGS</option>
+                    
+                      <option value="TID0000027">SERVICES AND REPAIR </option>
+                    
+                      <option value="TID0000014">SHUTTERING & SCAFFOLDING</option>
+                    
+                      <option value="TID0000015">STATIONARY</option>
+                    
+                      <option value="TID0000021">STONE & TILES</option>
+                    
+                      <option value="TID0000022">STRUCTURAL STEEL</option>
+                    
+                      <option value="TID0000023">TIMBER & PLY WOOD</option>
+                    
+                      <option value="TID0000024">TOOLS & INSTRUMENTS</option>
+                                      </select>
+              </div>
+            </div>
+
+
+            <div class="mb-3">
+              <label for="username">Type of vendor i.e. whether Manufacturer/ Stockist/  distributor/ dealer/ c & f agency / Retailer/ Trader<span class="mandatory">*</span> </label>
+              <div class="input-group">
+                <select data-live-search="true" class=" d-block w-100 selectpicker" formControlName="distributor_upl" id="distributor_upl" name="distributor_upl" >
+                  <option value="">Choose...</option>
+                  <option value="Manufacturer">Manufacturer</option>
+                  <option value="Stockist">Stockist</option>
+                  <option value="distributor">distributor</option>
+                  <option value="dealer">dealer</option>
+                  <option value="c & f agency">c & f agency</option>
+                  <option value="Retailer">Retailer</option>
+                  <option value="Trader">Trader</option>
+                </select>
+
+                <small class="error" *ngIf="f.distributor_upl.invalid && (f.distributor_upl.dirty || f.distributor_upl.touched)">
+                  <div *ngIf="f.distributor_upl.hasError('required')">Please choose type of vendor</div>
+                </small>
+
+              </div>
+            </div>
+                  
+            <div class="mb-3">
+              <label for="username">Is registered in MSME? (attach registration certificate) </label>
+
+              <br>
+              <label><input type="radio" name="is_register_msme" formControlName="is_register_msme" value="1" (click)="isMsmeRegister(1)">&nbsp;Yes&nbsp;<input type="radio" name="is_register_msme" formControlName="is_register_msme" value="0" checked="" (click)="isMsmeRegister(0)">&nbsp;No</label>
+
+              <div [ngClass]="isRegisterMsme" id="registration_certificate_div">
+                <div class="form-group" >
+                  <label for="username">MSME Registration No.<span class="mandatory">*</span> </label>
+                  <input type="text" name="msme_register_no" formControlName="msme_register_no" id="msme_register_no" class="form-control" placeholder="">
+                </div>
+                <div class="input-group">
+                  <input type="file" class="form-control" formControlName="registration_certificate" id="registration_certificate" name="registration_certificate"  accept="image/gif, image/jpeg, image/png,application/pdf,application/msword,
+    application/vnd.openxmlformats-officedocument.wordprocessingml.document" (change)="uploadMsme($event)">
+                </div>
+              </div>
+            </div>
+                  
+                  
+                              
+                  
+            <h4 class="mb-3">Details of authorized Contact person (Min 2 with their designations)</h4>
+                              
+            <span id="render-contact-person" formArrayName="contactPerson">
+
+               <div class="row">
+                <div class="col-md-12 mb-3">
+                  <button type="button" class="btn btn-sm btn-success float-right add-more-contact" (click)="addContactPerson()"  data-num="0">
+                    <i class="fa fa-plus fa-lg"></i>
+                  </button>
+                </div>
+                </div>
+
+               <!-- <div class="col-md-6 mb-3">
+                  <label for="firstName">Name<span class="mandatory">*</span></label>
+                  <input type="text" class="form-control" formControlName="contact_pname" id="contact_pname0" name="contact_pname[]" >
+
+                  <small class="error" *ngIf="f.contact_pname.invalid && (f.contact_pname.dirty || f.contact_pname.touched)">
+                    <div *ngIf="f.contact_pname.hasError('required')">Please enter contact name</div>
+                  </small>
+                </div>
+                
+
+                <div class="col-md-6 mb-3">
+                  <label for="lastName">Designations<span class="mandatory">*</span></label>
+                  <input type="text" class="form-control" formControlName="contact_pdesignations" id="contact_pdesignations0" name="contact_pdesignations[]" >
+                  
+                  <small class="error" *ngIf="f.contact_pdesignations.invalid && (f.contact_pdesignations.dirty || f.contact_pdesignations.touched)">
+                    <div *ngIf="f.contact_pdesignations.hasError('required')">Please enter designations</div>
+                  </small>
+                </div>
+              
+                <div class="col-md-6 mb-3">
+                  <label for="firstName">Mobile No.<span class="mandatory">*</span></label>
+                  <input type="text" class="form-control" formControlName="contact_pmobile" id="contact_pmobile0" name="contact_pmobile[]"  >
+                  
+                  <small class="error" *ngIf="f.contact_pmobile.invalid && (f.contact_pmobile.dirty || f.contact_pmobile.touched)">
+                    <div *ngIf="f.contact_pmobile.hasError('required')">Please enter mobile no.</div>
+                  </small>
+                
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <label for="lastName">Landline No.</label>
+                  <input type="text" class="form-control" formControlName="contact_plandline" id="contact_plandline0" name="contact_plandline[]"  >
+                </div>
+              
+                <div class="col-md-6 mb-3">
+                  <label for="firstName">Fax No.</label>
+                  <input type="text" class="form-control" formControlName="contact_pfax" id="contact_pfax0" name="contact_pfax[]" >
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <label for="lastName">E-mail ID<span class="mandatory">*</span></label>
+                  <input type="text" class="form-control" formControlName="contact_pemail" id="contact_pemail0" name="contact_pemail[]" >
+
+                  <small class="error" *ngIf="f.contact_pemail.invalid && (f.contact_pemail.dirty || f.contact_pemail.touched)">
+                    <div *ngIf="f.contact_pemail.hasError('required')">Please enter email.</div>
+                  </small>
+                </div>
+              </div> -->
+
+              <div class="row" *ngFor="let contper of contPerson().controls; let cp=index;" [formGroupName]="cp">
+                <hr>
+                <div class="col-md-12 mb-3">
+                  <button type="button" class="btn btn-sm btn-danger float-right remove-contact" (click)="removeContactPerson(cp)"><i class="fa fa-minus fa-lg"></i></button>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <label for="firstName">Name</label>
+                  <input type="text" class="form-control" formControlName="contact_pname" name="contact_pname" >
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <label for="lastName">Designations</label>
+                  <input type="text" class="form-control" formControlName="contact_pdesignations" name="contact_pdesignations" >
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <label for="firstName">Mobile No.</label>
+                  <input type="text" class="form-control" formControlName="contact_pmobile"  name="contact_pmobile" >
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <label for="lastName">Landline No.</label>
+                  <input type="text" class="form-control" formControlName="contact_plandline"  name="contact_plandline" >
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <label for="firstName">Fax No.</label>
+                  <input type="text" class="form-control" formControlName="contact_pfax"  name="contact_pfax" >
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <label for="lastName">E-mail ID</label>
+                  <input type="text" class="form-control" formControlName="contact_pemail" name="contact_pemail" >
+                </div>
+              </div>
+
+            </span>
+            <hr>
+                  
+            <div class="mb-3">
+              <label for="username">PAN No.<span class="mandatory">*</span>  </label>
+              <div class="input-group">
+                <input type="type" name="pan_no" formControlName="pan_no" id="pan_no" class="form-control" placeholder="">
+
+                <small class="error" *ngIf="f.pan_no.invalid && (f.pan_no.dirty || f.pan_no.touched)">
+                  <div *ngIf="f.pan_no.hasError('required')">Please enter pan no.</div>
+                </small>
+              </div>
+
+            </div>
+
+            <div class="mb-3">
+              <label for="username">PAN No (Attach documentary proof)<span class="mandatory">*</span> </label>
+              <div class="input-group">
+                <input type="file" class="form-control" formControlName="documentary_proof" id="documentary_proof" name="documentary_proof"  accept="image/gif, image/jpeg, image/png,application/pdf,application/msword,
+  application/vnd.openxmlformats-officedocument.wordprocessingml.document" (change)="uploadPan($event)">
+
+                <small class="error" *ngIf="f.documentary_proof.invalid && (f.documentary_proof.dirty || f.documentary_proof.touched)">
+                  <div *ngIf="f.documentary_proof.hasError('required')">Please attach file</div>
+                </small>
+              </div>
+            </div>
+                  
+            <hr>
+            <h5 class="mb-3">Add GST details (<small>Note : Multi-state vendor is required to fill separate registration form for each state.</small>)  <!--<button type="button" class="btn btn-sm btn-success float-right add-more-gst" data-num="0">
+                                      <i class="fa fa-plus fa-lg"></i>
+                                    </button>--></h5>
+            <span id="render-state-wise-gst">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="username">GST Registration No.<span class="mandatory">*</span></label>
+                      <div class="form-group">
+                        <input type="type" formControlName="gst_no" name="gst_no" id="gst_no0" class="form-control" placeholder="" >
+
+                        <small class="error" *ngIf="f.gst_no.invalid && (f.gst_no.dirty || f.gst_no.touched)">
+                          <div *ngIf="f.gst_no.hasError('required')">Please enter gst no.</div>
+                        </small>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label for="username">
+                          GST Registration Certificate (Attach Certificate Documentary Proof)<span class="mandatory">*</span> 
+                        </label>
+                        <div class="input-group">
+                          <input type="file" class="form-control" formControlName="certificate_documentary" id="certificate_documentary0" name="certificate_documentary[]"  accept="image/gif, image/jpeg, image/png,application/pdf,application/msword,
+                      application/vnd.openxmlformats-officedocument.wordprocessingml.document" (change)="uploadGst($event)">
+
+                          <small class="error" *ngIf="f.certificate_documentary.invalid && (f.certificate_documentary.dirty || f.certificate_documentary.touched)">
+                            <div *ngIf="f.certificate_documentary.hasError('required')">Please attach file</div>
+                          </small>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </span>
+                  
+            <span id="render-more-bank-detail">
+                <div class="row">
+                    <div class="col-md-12"><h4 class="mb-3">Bank details </h4></div>
+                
+                    <div class="col-md-6 mb-3">
+                      <label for="firstName">Name of Bank<span class="mandatory">*</span></label>
+                      <input type="text" class="form-control" formControlName="vendor_bank_name" id="vendor_bank_name0" name="vendor_bank_name[]" >
+
+                      <small class="error" *ngIf="f.vendor_bank_name.invalid && (f.vendor_bank_name.dirty || f.vendor_bank_name.touched)">
+                        <div *ngIf="f.vendor_bank_name.hasError('required')">Please enter bank name</div>
+                      </small>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="lastName">Name of Bank Branch & address</label>
+                      <input type="text" class="form-control" formControlName="vendor_bank_branch" id="vendor_bank_branch0" name="vendor_bank_branch[]" >
+
+                      
+                    </div>
+                    
+                    <div class="col-md-6 mb-3">
+                      <label for="firstName">Name of Account holder<span class="mandatory">*</span></label>
+                      <input type="text" class="form-control" formControlName="vendor_name_account" id="vendor_name_account0" name="vendor_name_account[]" >
+                      
+                      <small class="error" *ngIf="f.vendor_name_account.invalid && (f.vendor_name_account.dirty || f.vendor_name_account.touched)">
+                        <div *ngIf="f.vendor_name_account.hasError('required')">Please enter account holder name</div>
+                      </small>
+                    
+                    </div>
+    
+                    <div class="col-md-6 mb-3">
+                      <label for="lastName">Bank Account No.<span class="mandatory">*</span></label>
+                      <input type="text" class="form-control" formControlName="vendor_bank_account_no" id="vendor_bank_account_no0" name="vendor_bank_account_no[]" >
+                      
+                      <small class="error" *ngIf="f.vendor_bank_account_no.invalid && (f.vendor_bank_account_no.dirty || f.vendor_bank_account_no.touched)">
+                        <div *ngIf="f.vendor_bank_account_no.hasError('required')">Please enter account no.</div>
+                      </small>
+
+                    </div>
+                
+                    <div class="col-md-6 mb-3">
+                      <label for="firstName">RTGS/ IFSC code<span class="mandatory">*</span></label>
+                      <input type="text" class="form-control" formControlName="vendor_ifsc" id="vendor_ifsc0" name="vendor_ifsc[]" >
+
+                      <small class="error" *ngIf="f.vendor_ifsc.invalid && (f.vendor_ifsc.dirty || f.vendor_ifsc.touched)">
+                        <div *ngIf="f.vendor_ifsc.hasError('required')">Please enter ifsc code</div>
+                      </small>
+                    </div>
+    
+                    <div class="col-md-6 mb-3">
+                      <label for="lastName">Cancelled Cheque<span class="mandatory">*</span></label>
+                      <input type="file" class="form-control" formControlName="cancelled_cheque_upl" id="cancelled_cheque_upl0" name="cancelled_cheque_upl[]"  accept="image/gif, image/jpeg, image/png,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" (change)="uploadCheque($event)">
+                      <small class="error" *ngIf="f.cancelled_cheque_upl.invalid && (f.cancelled_cheque_upl.dirty || f.cancelled_cheque_upl.touched)">
+                        <div *ngIf="f.cancelled_cheque_upl.hasError('required')">Please attach cancelled cheque</div>
+                      </small>
+                    
+                    </div>
+                    
+                    
+                </div>
+            </span>
+                      
+            <hr>
+            <div class="mb-3">
+              <label for="address2">Details if any relative working in ACIL</label>
+              <input type="text" class="form-control" formControlName="staff_working_acil" id="staff_working_acil" name="staff_working_acil">
+            </div>
+                  
+            <hr>
+            <div class="mb-3">
+              <label for="address2">Reference of any two companies with those currently associated besides ACIL with Name of company, office address and contact person name & contact No. </label>
+              <!-- <input type="text" class="form-control" id="vendor_reference_acil" name="vendor_reference_acil"> -->
+
+              <span id="render-reference-company" formArrayName="referenceComp">
+
+                <div class="row">
+                  <div class="col-md-12 mb-3">
+                    <button type="button" class="btn btn-sm btn-success float-right add-reference-company" (click)="addReferencCompany()">
+                      <i class="fa fa-plus fa-lg"></i>
+                    </button>
+                  </div>
+                  </div>
+
+                 <!--  <div class="col-md-6 mb-3">
+                    <label for="firstName">Company Name</label>
+                    <input type="text" class="form-control" formControlName="comp_name" id="comp_name" name="comp_name[]">
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label for="lastName">Office Address</label>
+                    <input type="text" class="form-control" formControlName="comp_address" id="comp_address" name="comp_address[]">
+                  </div>
+                
+                  <div class="col-md-6 mb-3">
+                    <label for="firstName">Contact Person Name</label>
+                    <input type="text" class="form-control" formControlName="comp_contact_person" id="comp_contact_person" name="comp_contact_person[]">
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label for="lastName">Contact No.</label>
+                    <input type="text" formControlName="comp_contact_no" class="form-control" id="comp_contact_no" name="comp_contact_no[]" >
+                  </div>
+                </div> -->
+
+
+                <div class="row" *ngFor="let refercom of refComp().controls; let ri = index" [formGroupName]="ri">
+                  <div class="col-md-12 mb-3">
+                    <button type="button" class="btn btn-sm btn-danger float-right remove-reference-company" (click)="removeReferencCompany(ri)"><i class="fa fa-minus fa-lg"></i></button>
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label for="firstName">Comapny Name</label>
+                    <input type="text" class="form-control" formControlName="comp_name" id="comp_name" name="comp_name[]">
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label for="lastName">Office Address</label>
+                    <input type="text" class="form-control" formControlName="comp_address" id="comp_address" name="comp_address[]">
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label for="firstName">Contact Person Name</label>
+                    <input type="text" class="form-control" formControlName="comp_contact_person" id="comp_contact_person" name="comp_contact_person[]" >
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label for="lastName">Contact No.</label>
+                    <input type="text" class="form-control" formControlName="comp_contact_no" id="comp_contact_no" name="comp_contact_no[]" >
+                  </div>
+                </div>
+
+              </span>
+              <hr>
+            </div>
+
+        
+
+            <div class="mb-3">
+              <label for="username"> In case of SITC by vendor the copy of PF, ESIC & insurance needs to be submitted along with this form</label>
+
+              <br>
+              <label><input type="radio" formControlName="is_vendor_insurance" name="is_vendor_insurance" value="1" (click)="isVendInsurance(1)">&nbsp;Yes&nbsp;<input type="radio" formControlName="is_vendor_insurance" name="is_vendor_insurance" value="0"  (click)="isVendInsurance(0)" checked>&nbsp;No</label>
+
+              <div [ngClass]="isVendorInsurance" id="vendor_insurance_div">
+                <div class="form-group" >
+                  <label for="username">Registration certificate No.<span class="mandatory">*</span> </label>
+                  <input type="text"  formControlName="vendor_insurance_no" name="vendor_insurance_no" id="vendor_insurance_no" class="form-control" placeholder="">
+                </div>
+                <div class="input-group">
+                  <input type="file" class="form-control" id="vendor_insurance" formControlName="vendor_insurance" name="vendor_insurance"  accept="image/gif, image/jpeg, image/png,application/pdf,application/msword,
+  application/vnd.openxmlformats-officedocument.wordprocessingml.document" (change)="uploadInsurance($event)">
+                </div>
+              </div>
+            </div>
+
+
+            <div class="mb-3">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="input-group">
+                  <label><strong><input type="checkbox" id="vendor_blacklisted" formControlName="vendor_blacklisted" name="vendor_blacklisted" value="N">&nbsp;This is to certify that the vendor/company/firm who's details are above is not blacklisted by any Govt. Agency or ACIL.</strong></label>
+                  
+                  <small class="error" *ngIf="f.vendor_blacklisted.invalid && (f.vendor_blacklisted.dirty || f.vendor_blacklisted.touched)">
+                    <div *ngIf="f.vendor_blacklisted.hasError('required')">Please confirm you are not blacklisted</div>
+                  </small>
+                </div>
+                </div>
+              </div>
+            </div>
+
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block"  type="submit" name="submit" [disabled]="!vendorCreate.valid" id="btn-vendor-save">Submit</button>
+            <!-- <button type="button" class="btn btn-primary" (click)="openModal(template)">Open modal</button> -->
+          </form>
+        </div>
+      </div>
+                  
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">© 2020 ACIL</p>
+      <!--<ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>-->
+    </footer>
+  </div>
+                      
+                  
+  <div class="modal fade" id="vendor-otp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Validate OTP (One Time Password)</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="frm-vendor-otp" method="POST">
+            <input type="hidden" name="vid" id="vid">
+            <div class="form-group">
+              <label for="pwd">Please enter the OTP below to verify your phone number</label>
+              <input type="password" class="form-control" placeholder="OTP" id="otp" name="otp">
+            </div>
+  
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="validate-otp">Validate OTP</button>
+              <button type="button" class="btn btn-secondary" id="resend-otp">Resend OTP</button>
+            </div>
+          </form>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #template>
+    <div class="modal-header">
+       <h4 class="modal-title pull-left">Modal</h4>
+       <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+          <span aria-hidden="true">×</span>
+       </button>
+    </div>
+    <div class="modal-body">
+       This is a sample modal dialog box.
+    </div>
+    <div class="modal-footer">
+       <button type="button" class="btn btn-default" (click)="modalRef.hide()">Close</button>
+    </div>
+ </ng-template>
+                  
+     
+</body>

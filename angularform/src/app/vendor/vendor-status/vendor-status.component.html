@@ -1,0 +1,39 @@
+
+    <div class="container" style="background: #FFF;">
+        <div class="py-5 text-center">
+          <img class="d-block mx-auto mb-4" src="http://vendor.mysita.com/assets/img/acil-logo.jpeg" style="width: 100px;">
+          <h2>Vendor Management</h2>
+          <p class="lead">Vendor Management Form</p>
+        </div>
+        
+        
+        <div class="row">
+          <div class="col-md-12 order-md-1">
+            <form method="post" class="needs-validation">
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="firstName">Mobile No/ PAN/ GSTN</label>
+                  <input type="text" class="form-control" id="vendor_mobile" name="vendor_mobile" required="" value="" [(ngModel)]="vendorStatus.search">
+                  <span *ngIf="errMsg">
+                    <p class="text-danger" style="font-size: 14px;" >Please enter valid Mobile No/ PAN/ GSTN</p>
+                    <div class="text-success" style="font-size: 14px;"><a href="http://vendor.mysita.com/vendor">Create your registration</a></div>
+                  </span>
+                </div>
+                <span *ngIf="successMsg">
+                  <table class="table table-bordered">
+                    <tr *ngFor="let vendor of vendorList">
+                      <td>{{vendor.vendor_id}}</td>
+                      <td>{{vendor.vendor_name}}</td>
+                      <td>{{vendor.vendor_mobile}}</td>
+                      <td>{{vendor.pan_no}}</td>
+                      <td>{{vendor.gst_no}}</td>
+                    </tr>
+                  </table>
+                </span>
+              </div>
+              <button class="btn btn-primary btn-lg" type="button" (click)="submit()">Submit</button>
+            </form>
+          </div>
+        </div>
+  
+        

@@ -1,0 +1,30 @@
+<div class="container-sm p-5">
+    <div class="row">
+        <div class="col-lg-6">
+        <div class="card ">
+            <div class="card-header">
+                <h4>OTP</h4>
+            </div>
+            <div class="card-body">
+    
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group input-group">
+                            <input type="text" class="form-control" name="otp" id="otp" [(ngModel)]="otpInfo.otp"> 
+                            <button class="btn btn-outline-secondary" type="button" id="resend" (click)="resendotp()">Resend</button>
+                        </div>
+                        <p class="text-danger" *ngIf="errMsg">OTP is invalid</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary" name="matchotp" id="matchotp" (click)="submit()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

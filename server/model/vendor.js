@@ -1,0 +1,213 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+let profileContact = new Schema({
+	// vid: {type: Schema.Types.ObjectId},
+	profile_contact_name:{
+		type:String
+	},
+	profile_contact_no:{
+		type:String
+	},
+});
+
+
+let contactDetail = new Schema({
+	contact_pname:{
+		type:String,
+		required:true
+	},
+	contact_pdesignations:{
+		type:String,
+		required:true
+	},
+	contact_pmobile:{
+		type:String,
+		required:true
+	},
+	contact_plandline:{
+		type:String
+	},
+	contact_pfax:{
+		type:String
+	},
+	contact_pemail:{
+		type:String
+	}
+});
+
+let referenceComp = new Schema({
+	comp_name:{
+		type:String
+	},
+	comp_address:{
+		type:String
+	},
+	comp_contact_person:{
+		type:String
+	},
+	comp_contact_no:{
+		type:String
+	},
+});
+
+let schema = new Schema({
+	vendor_id:{
+		type:String
+	},
+	project_state:[{
+		type:String,
+		required:true
+	}],
+	profileContact:[profileContact],
+	contactPerson:[contactDetail],
+	referenceComp:[referenceComp],
+	vendor_type:{
+		type:String,
+		required:true
+	},
+	vendor_type_other:{
+		type:String,
+	},
+	vendor_name:{
+		type:String,
+		required:true
+	},
+	profile_upl:{
+		type:String
+	},
+	profile_upl_attach:[{
+		type:String,
+		//required:true
+	}],
+	vendor_address:{
+		type:String,
+		required:true
+	},
+	vendor_country:{
+		type:String,
+		required:true
+	},
+	vendor_state:{
+		type:String
+	},
+	vendor_city:{
+		type:String
+	},
+	vendor_pincode:{
+		type:String,
+		required:true
+	},
+	vendor_email:{
+		type:String,
+		required:true
+	},
+	vendor_mobile:{
+		type:String,
+		required:true
+	},
+	vendor_website:{
+		type:String,
+
+	},
+	multi_reg_type:{
+		type:String
+	},
+	is_proprietary_firm:{
+		type:String
+	},
+	aadhar_no:{
+		type:String
+	},
+	vendor_adhar:{
+		type:String
+	},
+	nature_of_business:[{
+		type:String,
+		required:true
+	}],
+	distributor_upl:{
+		type:String,
+		required:true
+	},
+	is_register_msme:{
+		type:String
+	},
+	msme_register_no:{
+		type:String
+	},
+	pan_no:{
+		type:String,
+		required:true
+	},
+	documentary_proof:{
+		type:String,
+	},
+	gst_no:{
+		type:String,
+		required:true
+	},
+	certificate_documentary:{
+		type:String
+	},
+	vendor_bank_name:{
+		type:String,
+		required:true
+	},
+	vendor_bank_branch:{
+		type:String
+	},
+	vendor_name_account:{
+		type:String,
+		required:true
+	},
+	vendor_bank_account_no:{
+		type:String,
+		required:true
+	},
+	vendor_ifsc:{
+		type:String,
+		required:true
+	},
+	cancelled_cheque_upl:{
+		type:String,
+	},
+	staff_working_acil:{
+		type:String,
+		required:true
+	},
+	
+	is_vendor_insurance:{
+		type:String
+	},
+	vendor_insurance_no:{
+		type:String
+	},
+	vendor_insurance:{
+		type:String
+	},
+	vendor_blacklisted:{
+		type:String
+	},
+	registration_certificate:{
+		type:String
+	},
+	status:{
+		type:Number
+	},
+	verify:{
+		type:Number,
+		default:'0',
+	},
+	created_date:{
+		type:String,
+		default:new Date()
+	},
+	updated_date:{
+		type:String,
+		default:new Date()
+	}
+});
+
+
+module.exports  = mongoose.model('Vendors',schema);

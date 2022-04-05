@@ -1,0 +1,33 @@
+<div class="container">
+<h2><a class="btn btn-sm btn-primary" ><i class="fa fa-plus"></i> Add New</a></h2>
+<!-- <div class="table-responsive">      -->
+    <table class="table table-bordered small">
+      <thead>
+        <tr>
+          <th>first_name</th>
+          <th>last_name</th>
+          <th>email</th>
+          <th>gender</th>
+          <th>ip_address</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <ng-container *ngFor="let user of users | paginate: { itemsPerPage: limit, currentPage: p, totalItems: totalUser }">
+          <tr >
+            <td>{{ user.first_name }}</td>
+            <td>{{ user.last_name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.gender }}</td>
+            <td>{{ user.ip_address }}</td>
+          </tr>
+      </ng-container>
+      </tbody>
+    </table>
+    <div class="pagination pagination-sm m-0 float-right">
+      <pagination-controls (pageChange)="getPage($event)"></pagination-controls>
+  </div>
+  <!-- </div> -->
+
+</div>
+  
